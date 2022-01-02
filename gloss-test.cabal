@@ -33,6 +33,7 @@ library
   build-depends:
       base >=4.7 && <5
     , gloss
+    , random
   default-language: Haskell2010
 
 executable gloss-test-exe
@@ -46,6 +47,7 @@ executable gloss-test-exe
       base >=4.7 && <5
     , gloss
     , gloss-test
+    , random
   default-language: Haskell2010
 
 test-suite gloss-test-test
@@ -60,4 +62,5 @@ test-suite gloss-test-test
       base >=4.7 && <5
     , gloss
     , gloss-test
+    , random
   default-language: Haskell2010

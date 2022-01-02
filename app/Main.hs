@@ -1,8 +1,9 @@
 module Main(main) where
 import Graphics.Gloss
+import System.Random
 
 window :: Display
-window = InWindow "Nice Window" (200, 200) (10, 10)
+window = InWindow "HaskellPhysics" (200, 200) (10, 10)
 
 background :: Color
 background = black
@@ -16,4 +17,7 @@ drawing = pictures
   ]
 
 main :: IO ()
-main = display window background drawing
+main = do
+  g <- getStdGen
+  print $ take 10 (randomRs ('a', 'z') g)
+  display window background drawing
